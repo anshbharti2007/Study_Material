@@ -1227,6 +1227,113 @@ So Y is a function of X.
 
 If we know probabilities of X, we can find probabilities of Y.
 
+
+
+28. Cumulative Distribution Function (CDF)
+
+The PMF tells you the probability of an exact value, but the CDF tells you the probability of getting that value or anything smaller.
+
+- Symbol: $$F(x)$$
+- Formula: $$F(x) = P(X \leq x)$$
+- Properties of CDF:
+	- It always starts at 0 and ends at 1.
+	- It never decreases (it either stays the same or goes up).
+
+Example
+
+Roll a fair die. Let X = number on the die.
+
+Find $F(3)$. Meaning: Probability of getting 3 or less.
+
+$$F(3) = P(X \leq 3) = P(X=1) + P(X=2) + P(X=3)$$
+
+$$F(3) = \frac{1}{6} + \frac{1}{6} + \frac{1}{6} = \frac{3}{6} = \frac{1}{2}$$
+
+Key Takeaway: PMF is for exact values ($=$). CDF is for cumulative values ($\leq$).
+
+29. Expected Value (Mean)
+
+Expected value is the long-run average of a random variable. If you repeated an experiment thousands of times and averaged the results, you would get the expected value.
+
+- Symbol: $$E(X) \quad \text{or} \quad \mu$$
+- Formula: $$E(X) = \sum x \cdot P(X=x)$$
+
+Simple meaning: Multiply each possible value by its probability, then add them all up.
+
+Example
+
+Let X be the number of heads when tossing 1 coin. X can be $0$ (Tail) or $1$ (Head).
+
+$$P(X=0) = \frac{1}{2}$$
+
+$$P(X=1) = \frac{1}{2}$$
+
+Find $E(X)$:
+
+$$E(X) = (0 \times \frac{1}{2}) + (1 \times \frac{1}{2})$$
+
+$$E(X) = 0 + 0.5 = 0.5$$
+
+Note: You cannot actually get 0.5 heads in one toss. It just means over many tosses, you average half a head per toss.
+
+30. Variance and Standard Deviation
+
+Variance measures how much the values spread out from the expected value (mean).
+
+- Symbol for Variance: $$Var(X) \quad \text{or} \quad \sigma^2$$
+- Formula: $$Var(X) = E(X^2) - [E(X)]^2$$
+- How to calculate $E(X^2)$: Square every x value, multiply by its probability, and add them up.
+
+$$E(X^2) = \sum x^2 \cdot P(X=x)$$
+
+Standard Deviation
+
+Standard deviation is simply the square root of the variance. It brings the spread back to the original units.
+
+- Symbol: $$SD(X) \quad \text{or} \quad \sigma$$
+- Formula: $$SD(X) = \sqrt{Var(X)}$$
+
+31. Properties of Expectation and Variance
+
+Often, we change a random variable by adding a constant or multiplying by a constant. Let $X$ be a random variable, and let $a$ and $b$ be constant numbers.
+
+Rule 1: Linearity of Expectation
+
+$$E(aX + b) = aE(X) + b$$
+
+Meaning: If you multiply all values by $a$ and add $b$, the new mean simply gets multiplied by $a$ and increased by $b$.
+
+Rule 2: Transformation of Variance
+
+$$Var(aX + b) = a^2 Var(X)$$
+
+Meaning: Adding a constant ($b$) does not change the variance (shifting data doesn't change the spread). Multiplying by a constant ($a$) multiplies the variance by $a^2$.
+
+Rule 3: Expected value of a constant
+
+$$E(c) = c$$
+
+The expected value of a fixed number is just that number.
+
+Example
+
+Suppose the average temperature in Celsius is $E(C) = 20^\circ$ and variance $Var(C) = 4$.
+
+Convert this to Fahrenheit using $F = 1.8C + 32$.
+
+Find Expected Value in Fahrenheit:
+
+$$E(F) = 1.8E(C) + 32$$
+
+$$E(F) = 1.8(20) + 32 = 36 + 32 = 68^\circ$$
+
+Find Variance in Fahrenheit:
+
+$$Var(F) = Var(1.8C + 32)$$
+
+$$Var(F) = (1.8)^2 Var(C)$$
+
+$$Var(F) = 3.24 \times 4 = 12.96$$
 ---
 
 # 29. Important Formula Summary

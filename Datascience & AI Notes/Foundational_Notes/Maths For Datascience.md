@@ -15,9 +15,6 @@
 * DAGs. Topological sorting and Longest path.  
 * Weighted graphs and shortest path algorithms.  
 
-Below is a **simple step-by-step explanation** of your PDF **M1_VOL1_SETS & FUNCTIONS**.  
-I will explain like basic notes for a beginner, with **practice questions + answers**.
-
 The PDF mainly has these chapters:
 
 1. Set Theory  
